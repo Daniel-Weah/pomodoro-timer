@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+#pomodoro-timer {
+  text-align: center;
+  background: rgb(2, 2, 24);
+  padding: 50px;
+  width: 50%;
+  height: 70vh;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#time {
+  font-size: 5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+}
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#title {
+  color: #fff;
+  margin-top: -8px;
+}
+#progress-bar {
+  height: 15px;
+  background-color: #4caf50;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progress {
+  height: 100%;
+  background-color: #76c7c0;
+  width: 100%;
+  transition: width 0.5s ease;
+}
+.top_btn {
+  background-color: rgb(2, 2, 18);
+  border-radius: 30px;
+}
+.top_btn button {
+  border: none;
+  background-color: transparent;
+  color: #aaa;
+  transition: all 0.5s ease-in-out;
+}
+.top_btn button:first-of-type {
+  background-color: #ff6347;
+  border-radius: 20px;
+  color: #fff;
+}
+.top_btn button:hover {
+  background-color: #ff6347;
+  border-radius: 20px;
+  color: #fff;
+}
+.bottom-btn {
+  border-radius: 30px;
+  margin-top: 20px;
+}
+.bottom-btn button {
+  border: none;
+  width: 30%;
+  font-size: 1.2rem;
+  background-color: mediumpurple;
+  border-radius: 10px;
+  color: #000;
+  transition: all 0.5s ease-in-out;
+}
+.bottom-btn button:hover {
+  background-color: rgb(183, 155, 239);
+}
+
+@media screen and (max-width: 600px) {
+  #pomodoro-timer {
+    text-align: center;
+    padding: 50px;
+    width: 100%;
+    height: 84.4%;
+    border-radius: 0px;
+  }
+  #title {
+    color: #fff;
+    margin-top: 1pc;
+  }
+  .bottom-btn button {
+    width: 40%;
+    margin-top: 1rem;
+  }
+  .bottom-btn {
+    margin-top: 3rem;
+  }
+}
