@@ -43,6 +43,8 @@ function startTimer() {
   if (isRunning) return;
 
   isRunning = true;
+  startButton.textContent = "Start";
+
 
   timer = setInterval(() => {
     if (timeLeft > 0) {
@@ -62,7 +64,7 @@ function startTimer() {
       timeDisplay.style.color = "";
       // switching back to the work time
       alert("Break time's up! Back to work.");
-      
+
       setWorkTime();
     }
   }, 1000);
@@ -71,6 +73,7 @@ function startTimer() {
 // Function to pause the timer
 function pauseTimer() {
   isRunning = false;
+  startButton.textContent = "Continue..";
   clearInterval(timer);
 }
 
@@ -78,6 +81,7 @@ function pauseTimer() {
 function resetTimer() {
   pauseTimer();
   timeLeft = defaultTime;
+  startButton.textContent = "Start";
   updateDisplay();
 }
 
